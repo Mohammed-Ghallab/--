@@ -1,0 +1,166 @@
+التمرين األول# 
+
+# first question
+
+n = int(input("Enter the number of elements: "))
+
+while n <= 0:
+    print("Number of elements must be greater than 0: ")
+arr = []
+for i in range (n):
+    num = i + 1
+    arr.append(num)
+print("number of elements in arr is : ", n)
+print("Enter an integer for each element in the array: ")
+print("elements", end = " ")
+
+for i in arr:
+    print(i , end = ",")
+_____________________________________________________________
+#second question
+
+def PrintSecondLowest(arr):
+    smallest = min(arr)
+    second_smallest = float('inf')
+    for i in arr:
+        if i > smallest and i < second_smallest:
+            second_smallest = i
+    print("Second Lowest number in array is: ", second_smallest)
+        
+arr = [10, 8, 6, 4]
+PrintSecondLowest(arr)
+________________________________________________________________
+#3rd question
+for i in range(1, 13,):
+    print("جدول الضرب للعدد :", i)
+    for n in range(1, 13):
+        print(i, "x", n, "=", i*n)
+    print()
+__________________________________________________________________
+#4th question
+n6765 = 21
+#n1, n2 = 0, 1
+n1 = 0
+n2 = 1
+n = 0
+while n < n6765:
+    print(n1)
+    n1n2 = n1 + n2
+    # update values
+    n1 = n2
+    n2 = n1n2
+    n += 1
+____________________________________________________________________
+التمرين الثاني
+#first question
+
+n = int(input("Enter the number of lines: "))
+
+while n <= 0:
+    n = int(input("Number of lines must be a positive integer greater than 0: "))
+for i in range(n, 0, -1):
+    stars = "*" * (2 * i - 1)
+    print(stars)
+______________________________________________________________
+#second question
+
+n = int(input("Enter number of rows: "))
+m = int(input("Enter number of columns: "))
+while n <= 0:
+    n = int(input("Enter number of rows Must be greater than 0: "))
+while m <= 0:
+    m = int(input("Enter number of columns Must be greater than 0: "))    
+def print_rectangle(n, m) :
+      
+    for i in range(1, n+1) :
+        for j in range(1, m +1) :
+            if (i == 1 or i == n or
+                j == 1 or j == m) :
+                print("*", end =" ")            
+            else :
+                print("*", end=" ")                      
+        print()
+print_rectangle(n, m)
+
+___________________________________________________________
+#3rd question 
+
+n = int(input("Enter the number of rows: "))
+if n <= 0:
+    print("Number of rows must be greater than 0.")
+else:
+    for i in range(n):
+        spaces = " " * (n - i - 1)
+        stars = "*" * (2 * i + 1)
+        print(f"{spaces}{stars}")
+___________________________________________________________
+#4th question 
+
+n = int(input("Enter the number of rows: "))
+if n <= 0:
+    print("Number of rows must be greater than 0.")
+else:
+    for i in range(n, 0, -1):
+        spaces = " " * (n - i)
+        stars = "*" * (2 * i - 1)
+        print(f"{spaces}{stars}")
+________________________________________________________________
+5th question
+
+n = int(input("Enter number of rows: "))
+if n <= 0:
+    print("Number of rows must be greater than 0")
+else:
+    for i in range(1, n + 1):
+        for j in range(1, i+1):
+            print("*", end="")
+        print()
+    for i in range(n-1, 0, -1):
+        for j in range(1, i+1):
+            print("*", end="")
+        print()
+______________________________________________________________
+#6th question 
+
+totalrows = int(input("Enter number of rows: "))
+while totalrows <= 0:
+    print("Number of rows must be greater than 0")
+
+for row in range (1 ,totalrows+1):
+    for ft in range(1, (totalrows - row)+1):
+        print("*", end="")
+    for space in range(1):
+        print(" ", end="")
+    for st in range(1, row + 1):
+        print("*", end="")
+    print()
+____________________________________________________________
+7th question
+
+totalrows = int(input("Enter number of rows(must be odd): "))
+while totalrows % 2 == 0:
+    totalrows = int(input("Number of rows must be odd: "))
+
+for row in range (1, totalrows+1):
+    for col in range (1, totalrows+1):
+        if  (row  == col) or (col + row) == (totalrows+1):
+            print(" ", end = " ")
+        else:
+            print("*", end = " ")
+    print()
+
+____________________________________________________________
+
+8th question 
+
+totalrows = int(input("Enter number of rows(must be odd): "))
+while totalrows  % 2 == 0:
+    totalrows = int(input("Number of rows must be greater than 0 and odd: "))
+    
+for row in range (1, totalrows+1):
+    for col in range (1, totalrows+1):
+        if (col == 1)  or (col == totalrows) or (row  == col) or (col + row) == (totalrows+1):
+            print("*", end = " ")
+        else:
+            print(" ", end = " ")
+    print()
